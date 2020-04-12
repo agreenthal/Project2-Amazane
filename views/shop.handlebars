@@ -1,0 +1,50 @@
+<link href="https://fonts.googleapis.com/css?family=Chakra+Petch|Dosis|Inconsolata|Roboto+Mono&display=swap"
+  rel="stylesheet">
+<div class="row">
+  <div class="col s12 m12">
+    <div class="row">
+      <form class="col s12 m8 offset-m2 l6 offset-l3">
+        <div class="row">
+          <div class="input-field">
+            <a href="#"><i class="material-icons prefix search-button">search</i></a>
+            <textarea id="search_input" style="margin-left: 30px;" class="materialize-textarea"></textarea>
+            <label style="margin-left: 30px;" for="icon_prefix2">Search</label>
+          </div>
+          <div class="row">
+            <div class="col s12">
+              <ul class="tabs"> 
+                <li class="tab col s2"><a class="active category-button" id="all-tab" data-cat="all" style="padding: 0px" href="#">All</a></li>
+                <li class="tab col s2"><a href="#" style="padding: 0px" class="category-button" id="shoes-tab" data-cat="shoes">Shoes</a></li>
+                <li class="tab col s2"><a href="#" style="padding: 0px" class="category-button" id="sweatshirts-tab" data-cat="sweatshirts">Sweatshirts</a></li>
+                <li class="tab col s2"><a href="#" style="padding: 0px" class="category-button" id="bottoms-tab" data-cat="bottoms">Bottoms</a></li>
+                <li class="tab col s2"><a href="#" style="padding: 0px" class="category-button" id="t-shirts-tab" data-cat="t-shirts">T-shirts</a></li>
+                <li class="tab col s2"><a href="#" style="padding: 0px" class="category-button" id="accessories-tab" data-cat="accessories">Accessories</a></li>
+              </ul>
+            </div>
+          </div>
+        </div>
+      </form>
+    </div>
+  </div>
+
+  <div class="col s12 m10 offset-m1 l8 offset-l2">
+    {{#each items}}
+    <div class="col s10 offset-s1 m6 l3 item">
+      <div class="card small"
+        style="background: url('{{picture}}'); background-size: 100%; background-position: center top 10px; background-repeat: no-repeat;">
+        <div class="card-action">
+          <span><i class="material-icons activator right">more_vert</i></span>
+          <span class="card-title activator grey-text text-darken-4 truncate" style="font-size: 16px; font-family:'Courier New', Courier; font-weight: bold">{{name}}</span>
+        </div>
+        <div class="card-reveal" style="opacity: 0.9">
+          <span class="card-title"><i class="material-icons right">close</i></span>
+          <p>{{name}}</p>
+          <p style="font-weight: bold;">${{price}}</p>
+          <a class="waves-effect waves-light btn add-to-cart" data-id="{{id}}"><i
+              class="material-icons right">add</i>Add to Cart</a>
+        </div>
+      </div>
+    </div>
+    {{/each}}
+  </div>
+</div>

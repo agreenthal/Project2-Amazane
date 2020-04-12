@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+  <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU="
+    crossorigin="anonymous"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons" />
+  <link href="https://fonts.googleapis.com/css?family=Nosifer|Playfair+Display+SC:900&display=swap" rel="stylesheet">
+  <script src='https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/js/all.min.js'></script>
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.12.1/css/all.min.css">
+
+  <style>
+    .footer {
+      position: fixed;
+      bottom: 0;
+      width: 100%;
+      height: 60px;
+      /* Set the fixed height of the footer here */
+    }
+
+    .body-container {
+      margin-bottom: 60px;
+    }
+  </style>
+
+  <title>Amazane</title>
+</head>
+
+<body>
+  <nav>
+    <div class="nav-wrapper cyan lighten-2">
+      <a href='/land' class="brand-logo center pink-text lighten-2" style="font-weight: bold; font-family: 'Playfair Display SC', serif; opacity: 0.7;">AmaZane</a>
+      <a href="#" data-target="mobile-demo" class="sidenav-trigger"><i class="material-icons">menu</i></a>
+      <ul class="right hide-on-med-and-down">
+        <li><a href="/"><b>Shop</b></a></li>
+        {{#if login}}
+        <li><a href="/profile"><b>Profile</b></a></li>
+        <li><a href="/auth/logout"><b>Log out</b></a></li>
+        {{else}}
+        <li><a href="/auth/google"><b>Login with </b><i class="fab fa-google"></i><b>oogle+</b></a></li>
+        {{/if}}
+        <li><a id="cart-page-button"><i class="fas fa-shopping-cart"></i>(<span id="cart-count"></span>)</a></li>
+      </ul>
+    </div>
+  </nav>
+
+  <ul class="sidenav pink lighten-4" id="mobile-demo">
+    <li><a href="/"><b>Shop</b></a></li>
+    {{#if login}}
+    <li><a href="/profile"><b>Profile</b></a></li>
+    <li><a href="/auth/logout"><b class="text-white">Log out</b></a></li>
+    {{else}}
+    <li><a href="/auth/google"><b>Login with </b><i class="fab fa-google"></i><b>oogle+</b></a></li>
+    {{/if}}
+    <li><a href='/cart'><b>Cart</b></a></li>
+  </ul>
+
+  <div class="body-container">
+    {{{body}}}
+  </div>
+
+
+
+  <footer class="footer footer-copyright pink lighten-2 valign-wrapper">
+    <div class="container">
+      © 2020 UCLA Bootcamp Full Stack Flex
+      <a class="grey-text text-lighten-4 right" target="_blank" href="https://bootcamp.uclaextension.edu/coding/">Link
+        to Bootcamp</a>
+    </div>
+  </footer>
+
+  <script src="/js/script.js"></script>
+</body>
+
+</html>
