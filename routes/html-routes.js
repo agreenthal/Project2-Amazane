@@ -36,7 +36,7 @@ router.get("/apii/getCartCount", (req, res) => {
 //   res.json(cart);
 // })
 
-router.get('/', (req, res) => {
+router.get('/land', (req, res) => {
   res.render('index');
 })
 
