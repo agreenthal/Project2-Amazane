@@ -9,11 +9,11 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/Isaac-Aguirre/Project2.git"
+    "url": "git+https://github.com/agreenthal/Project2-Amazane.git"
   },
   "keywords": [],
-  "author": "Isaac Aguirre",
-  "license": "ISC",
+  "author": "Adam Greenthal",
+  "license": "APG",
   "dependencies": {
     "cookie-session": "^1.4.0",
     "express": "^4.17.1",
@@ -24,9 +24,9 @@
     "sequelize": "^4.41.2"
   },
   "bugs": {
-    "url": "https://github.com/Isaac-Aguirre/Project2/issues"
+    "url": "https://https://github.com/agreenthal/Project2-Amazane/issues"
   },
-  "homepage": "https://github.com/Isaac-Aguirre/Project2#readme",
+  "homepage": "https://https://github.com/agreenthal/Project2-Amazane#readme",
   "devDependencies": {
     "nodemon": "^2.0.2"
   }
