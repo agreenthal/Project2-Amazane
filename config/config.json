@@ -1,4 +1,12 @@
 {
+  "local": {
+    "username": "admin",
+    "password": "Lambeau!",
+    "database": "Amazane",
+    "host": "127.0.0.1",
+    "dialect": "mysql",
+    "operatorsAliases": false
+  },
   "development": {
     "username": "admin",
     "password": "Lambeau!",
@@ -8,9 +16,9 @@
     "operatorsAliases": false
   },
   "test": {
-    "username": "root",
-    "password": null,
-    "database": "database_test",
+    "username": "admin",
+    "password": "Lambeau!",
+    "database": "Amazane",
     "host": "127.0.0.1",
     "dialect": "mysql",
     "operatorsAliases": false
