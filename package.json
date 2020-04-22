@@ -29,7 +29,7 @@
   "bugs": {
     "url": "https://https://github.com/agreenthal/Project2-Amazane/issues"
   },
-  "homepage": "https://https://github.com/agreenthal/Project2-Amazane#readme",
+  "homepage": "https://https://github.com/agreenthal/Project2-Amazane",
   "devDependencies": {
     "nodemon": "^2.0.2"
   }
