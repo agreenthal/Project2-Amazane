@@ -36,7 +36,7 @@ router.get("/apii/getCartCount", (req, res) => {
 //   res.json(cart);
 // })
 
-router.get('/land', (req, res) => {
+router.get('/', (req, res) => {
   res.render('index');
 })
 
@@ -72,7 +72,7 @@ router.get("/cart", (req, res) => {
 });
 
 function updateCartByItemIndex(itemIndex, total, cart) {
-  return new Promise(function(resolve, reject) {
+  return new Promise(function (resolve, reject) {
     db.Item.findOne({
       where: {
         id: itemIndex
@@ -119,7 +119,7 @@ router.get("/confirm-order/:orderNumber", (req, res) => {
 });
 
 router.get("/:query?", (req, res) => {
-  db.Item.findAll({}).then(function(items) {
+  db.Item.findAll({}).then(function (items) {
     let hbsObj = items.map(item => {
       return item.dataValues;
     });
@@ -175,7 +175,7 @@ router.get("/:query?", (req, res) => {
     } else {
       res.render("shop", {});
     }
-    
+
   });
 });
 
