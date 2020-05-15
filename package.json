@@ -31,6 +31,6 @@
   },
   "homepage": "https://https://github.com/agreenthal/Project2-Amazane",
   "devDependencies": {
-    "nodemon": "^2.0.2"
+    "nodemon": "^2.0.4"
   }
 }
